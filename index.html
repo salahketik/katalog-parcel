@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a425a" />
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- CSS-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Katalog Parcel Fee Rainbow</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo"
+          ><img src="assets/img/logo.png" alt="" />Fee Rainbow</a
+        >
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="#" class="nav__link">Home</a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/62895602592430?text=Halo%20Saya%20ingin%20bertanya%20tentang%20parcel%20Fee%20Rainbow"
+                target="_blank"
+                class="nav__link"
+              >
+                Kontak
+              </a>
+            </li>
+          </ul>
+
+          <!-- Close Button -->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-large-line"></i>
+          </div>
+        </div>
+        <!-- Close Button -->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line"></i>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <!--==================== PRODUCT ====================-->
+      <section class="product section" id="product">
+        <h2 class="section__title">List Produk</h2>
+        <div class="filter__container container">
+          <button value="all" class="filter__button">Semua Produk</button>
+          <button value="promo" class="filter__button">Produk Promo</button>
+          <button value="makanan" class="filter__button">Parcel Makanan</button>
+          <button value="keramik" class="filter__button">Parcel Keramik</button>
+          <button value="mix" class="filter__button">Makanan + Keramik</button>
+        </div>
+        <div class="product__container container grid" id="productContainer">
+          <article>
+            <!-- Produk akan dirender dari JS -->
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <div>
+          <a href="#" class="footer__logo"
+            ><img src="assets/img/logo.png" alt="" />Fee Rainbow</a
+          >
+          <p class="footer__description">
+            Menjual parcel & hampers premium untuk berbagai acara.
+          </p>
+        </div>
+        <div class="footer__content grid">
+          <div>
+            <h3 class="footer__title">Alamat</h3>
+            <ul class="footer__list">
+              <li>
+                <address class="footer__info">
+                  Perintis Kemerdekaan <br />No. 150,Kota Padang <br />
+                  Sumatera Barat 25128
+                </address>
+              </li>
+              <li>
+                <address class="footer__info">9AM - 10PM</address>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer__title">Contact Us</h3>
+            <ul class="footer__list">
+              <li>
+                <address class="footer__info">+62895602592430</address>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer__title">Follow Us</h3>
+            <div class="footer__social">
+              <a href="">
+                <a href="#">
+                  <i class="ri-instagram-line"></i>
+                </a>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="footer__copy">
+        &#169; All Rights Reserved By Fee Rainbow
+      </span>
+    </footer>
+
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+    </a>
+    <!-- DATA JS -->
+    <script src="assets/js/data.js"></script>
+
+    <!-- INDEX JS -->
+    <script src="assets/js/index.js" defer></script>
+  </body>
+</html>
