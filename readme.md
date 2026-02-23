@@ -1,45 +1,57 @@
-# 🎁 Katalog Parcel Fee Rainbow
+<h1 align="center">🎁 Katalog Parcel Fee Rainbow</h1>
 
-![HTML](https://img.shields.io/badge/HTML-5-orange)
-![CSS](https://img.shields.io/badge/CSS-3-blue)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+<p align="center">
+  Website katalog parcel premium berbasis HTML, CSS, dan JavaScript.
+  <br/>
+  Memudahkan pelanggan melihat produk dan melakukan pemesanan langsung via WhatsApp.
+</p>
 
-Website katalog parcel & hampers premium berbasis HTML, CSS, dan JavaScript.
-Memudahkan pelanggan melihat produk dan melakukan pemesanan langsung via WhatsApp.
+<p align="center">
+  <a href="https://salahketik.github.io/katalog-parcel/">🌐 Live Demo</a>
+  •
+  <a href="https://github.com/salahketik/katalog-parcel">📦 Repository</a>
+</p>
 
----
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js" />
+</p>
 
-## 🌐 Live Demo
-
-👉 https://username.github.io/
-
----
-
-## 📦 Repository
-
-https://github.com/salahketik/katalog-parcel
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen">
+  <img src="https://img.shields.io/badge/Responsive-Yes-blue">
+  <img src="https://img.shields.io/badge/License-MIT-yellow">
+</p>
 
 ---
 
 ## 📸 Preview
 
-![Preview Website](assets/img/preview.png)
+<p align="center">
+  <img src="assets/img/preview.webp" width="350">
+</p>
+
+---
+
+## 🎯 Why This Project?
+
+Project ini dibuat untuk membantu bisnis parcel / hampers
+menampilkan katalog produk secara online dengan tampilan modern,
+tanpa perlu menggunakan marketplace.
 
 ---
 
 ## ✨ Fitur Utama
 
-- Responsive Design (Mobile Friendly)
-- Filter produk berdasarkan kategori
-- Modal detail produk
-- Scroll to top button
-- WhatsApp direct order
-- UI modern dengan CSS Variables
+- 📱 Responsive Design (Mobile Friendly)
+- 🔎 Filter produk berdasarkan kategori
+- 🪟 Modal detail produk
+- ⬆️ Scroll to top button
+- 💬 WhatsApp direct order
+- 🎨 UI modern dengan CSS Variables
 
 ---
 
-## 🛠 Teknologi
+## 🛠 Tech Stack
 
 - HTML5
 - CSS3
@@ -70,7 +82,7 @@ katalog-parcel/
 
 ---
 
-## 🚀 Cara Menjalankan
+## 🚀 Cara Menjalankan Project
 
 1. Clone repository
 
@@ -84,20 +96,33 @@ git clone https://github.com/salahketik/katalog-parcel.git
 cd katalog-parcel
 ```
 
-3. Buka `index.html` di browser
+3. Buka file `index.html` di browser
+
+Atau gunakan **Live Server** di VS Code.
 
 ---
 
-## 🚀 Deploy ke GitHub Pages
+## 🌍 Deploy ke GitHub Pages
 
 1. Masuk ke repository GitHub
 2. Klik **Settings**
 3. Pilih **Pages**
 4. Pilih branch: `main`
-5. Save
-6. Website akan aktif di:
+5. Klik Save
+
+Website akan aktif di:
 
 https://salahketik.github.io/katalog-parcel/
+
+---
+
+## 🔮 Future Improvements
+
+- [ ] Shopping Cart
+- [ ] Search Feature
+- [ ] Admin Dashboard
+- [ ] Backend Integration
+- [ ] Payment Gateway
 
 ---
 
@@ -105,6 +130,12 @@ https://salahketik.github.io/katalog-parcel/
 
 WhatsApp:  
 https://wa.me/62895602592430
+
+---
+
+## ⭐ Support
+
+Jika kamu suka project ini, jangan lupa beri ⭐ di GitHub!
 
 ---
 
@@ -116,8 +147,9 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-Crafted with ❤️ by **SalahKetik**  
-Frontend Developer & Content Creator  
-
-GitHub: https://github.com/salahketik
-Instagram: https://instagram.com/salahketikan
+<p align="center">
+  Crafted with ❤️ by <strong>SalahKetik</strong><br/>
+  Frontend Developer & Content Creator<br/><br/>
+  <a href="https://github.com/salahketik">GitHub</a> • 
+  <a href="https://instagram.com/salahketikan">Instagram</a>
+</p>
