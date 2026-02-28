@@ -76,13 +76,18 @@ function renderProducts(data) {
 renderProducts(products);
 
 /* ================= FILTER KATEGORI + SORT HARGA ================= */
+/* ================= FILTER KATEGORI + SORT + RANGE ================= */
 
 let activeCategory = "all";
 let activeSort = "default";
 
 const filterButtons = document.querySelectorAll(".filter__button");
 const sortSelect = document.getElementById("sortPrice");
+const minPriceInput = document.getElementById("minPrice");
+const maxPriceInput = document.getElementById("maxPrice");
+const applyPriceBtn = document.getElementById("applyPrice");
 
+/* === FILTER KATEGORI === */
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     activeCategory = button.value;
@@ -90,22 +95,57 @@ filterButtons.forEach((button) => {
   });
 });
 
-sortSelect.addEventListener("change", () => {
-  activeSort = sortSelect.value;
-  applyFilters();
+/* === SORT HARGA === */
+if (sortSelect) {
+  sortSelect.addEventListener("change", () => {
+    activeSort = sortSelect.value;
+    applyFilters();
+  });
+}
+
+/* === FILTER RANGE HARGA === */
+if (applyPriceBtn) {
+  applyPriceBtn.addEventListener("click", () => {
+    applyFilters();
+  });
+}
+
+function formatRupiah(angka) {
+  return "Rp " + angka.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+function cleanNumber(value) {
+  return parseInt(value.replace(/\D/g, "")) || 0;
+}
+
+minPriceInput.addEventListener("input", (e) => {
+  e.target.value = formatRupiah(e.target.value);
 });
 
+maxPriceInput.addEventListener("input", (e) => {
+  e.target.value = formatRupiah(e.target.value);
+});
+
+/* ================= FUNCTION UTAMA ================= */
 function applyFilters() {
   let filtered = [...products];
 
-  // FILTER KATEGORI
+  const minPrice = cleanNumber(minPriceInput.value);
+  const maxPrice = cleanNumber(maxPriceInput.value) || Infinity;
+
+  // 1️⃣ FILTER KATEGORI
   if (activeCategory !== "all") {
     filtered = filtered.filter(
       (product) => product.category === activeCategory
     );
   }
 
-  // 🔥 PRIORITAS PROMO SAAT SEMUA PRODUK
+  // 2️⃣ FILTER RANGE HARGA
+  filtered = filtered.filter(
+    (product) => product.price >= minPrice && product.price <= maxPrice
+  );
+
+  // 3️⃣ PRIORITAS PROMO SAAT SEMUA
   if (activeCategory === "all") {
     filtered.sort((a, b) => {
       if (a.category === "promo" && b.category !== "promo") return -1;
@@ -114,7 +154,7 @@ function applyFilters() {
     });
   }
 
-  // SORT HARGA
+  // 4️⃣ SORT HARGA
   if (activeSort === "low") {
     filtered.sort((a, b) => a.price - b.price);
   } else if (activeSort === "high") {
@@ -124,7 +164,7 @@ function applyFilters() {
   renderProducts(filtered);
 }
 
-// Render pertama
+/* Render awal */
 applyFilters();
 /* ================= OPEN MODAL (DYNAMIC) ================= */
 
@@ -156,7 +196,7 @@ document.addEventListener("click", function (e) {
             <span class="modal__price">Rp. ${product.price.toLocaleString(
               "id-ID"
             )}</span>
-            <a href="https://wa.me/62895602592430?text=${encodeURIComponent(
+            <a href="https://wa.me/6282268948846?text=${encodeURIComponent(
               `Halo kak, saya mau pesan:
 Nama Paket : ${product.name}
 Kategori   : ${product.category}
