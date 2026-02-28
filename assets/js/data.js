@@ -262,7 +262,7 @@ const products = [
   {
     id: 16,
     name: "Paket 6",
-    price: 7500000,
+    price: 750000,
     image: "assets/img/product/keramik6.webp",
     category: "keramik",
     info: [
