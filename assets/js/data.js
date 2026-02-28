@@ -371,7 +371,7 @@ const products = [
   {
     id: 23,
     name: "Paket Mix 6",
-    price: 75000,
+    price: 750000,
     image: "assets/img/product/mix6.webp",
     category: "mix",
     info: [
