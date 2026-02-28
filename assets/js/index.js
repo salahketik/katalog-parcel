@@ -59,6 +59,7 @@ function renderProducts(data) {
   src="${product.image || "assets/img/logo.png"}"
   class="product__img"
   loading="lazy"
+  decoding="async"
   onerror="this.onerror=null; this.src='assets/img/logo.png';"
 />
           <div class="product__data">
@@ -184,6 +185,7 @@ document.addEventListener("click", function (e) {
   src="${product.image || "assets/img/logo.png"}"
   class="modal__img"
   loading="lazy"
+  decoding="async"
   onerror="this.onerror=null; this.src='assets/img/logo.png';"
 />
           <div class="modal__data">
