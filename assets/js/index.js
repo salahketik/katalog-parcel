@@ -75,24 +75,57 @@ function renderProducts(data) {
 
 renderProducts(products);
 
+/* ================= FILTER KATEGORI + SORT HARGA ================= */
+
+let activeCategory = "all";
+let activeSort = "default";
+
 const filterButtons = document.querySelectorAll(".filter__button");
+const sortSelect = document.getElementById("sortPrice");
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const category = button.value;
-
-    if (category === "all") {
-      renderProducts(products);
-    } else {
-      const filtered = products.filter(
-        (product) => product.category === category
-      );
-
-      renderProducts(filtered);
-    }
+    activeCategory = button.value;
+    applyFilters();
   });
 });
 
+sortSelect.addEventListener("change", () => {
+  activeSort = sortSelect.value;
+  applyFilters();
+});
+
+function applyFilters() {
+  let filtered = [...products];
+
+  // FILTER KATEGORI
+  if (activeCategory !== "all") {
+    filtered = filtered.filter(
+      (product) => product.category === activeCategory
+    );
+  }
+
+  // 🔥 PRIORITAS PROMO SAAT SEMUA PRODUK
+  if (activeCategory === "all") {
+    filtered.sort((a, b) => {
+      if (a.category === "promo" && b.category !== "promo") return -1;
+      if (a.category !== "promo" && b.category === "promo") return 1;
+      return 0;
+    });
+  }
+
+  // SORT HARGA
+  if (activeSort === "low") {
+    filtered.sort((a, b) => a.price - b.price);
+  } else if (activeSort === "high") {
+    filtered.sort((a, b) => b.price - a.price);
+  }
+
+  renderProducts(filtered);
+}
+
+// Render pertama
+applyFilters();
 /* ================= OPEN MODAL (DYNAMIC) ================= */
 
 document.addEventListener("click", function (e) {
@@ -125,7 +158,7 @@ document.addEventListener("click", function (e) {
             )}</span>
             <a href="https://wa.me/62895602592430?text=${encodeURIComponent(
               `Halo kak, saya mau pesan:
-              Nama Paket : ${product.name}
+Nama Paket : ${product.name}
 Kategori   : ${product.category}
 Harga      : Rp. ${product.price.toLocaleString("id-ID")}
 Mohon info selanjutnya ya kak`

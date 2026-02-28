@@ -58,6 +58,22 @@
           <button value="keramik" class="filter__button">Parcel Keramik</button>
           <button value="mix" class="filter__button">Makanan + Keramik</button>
         </div>
+        <div class="filter__price container">
+          <!-- Sorting -->
+          <select id="sortPrice">
+            <option value="default">Urutkan Harga</option>
+            <option value="low">Termurah</option>
+            <option value="high">Termahal</option>
+          </select>
+
+          <div class="range_filter">
+            <!-- Input Range Harga -->
+          <input type="number" id="minPrice" placeholder="Harga Min" />
+          <input type="number" id="maxPrice" placeholder="Harga Max" />
+          </div>
+
+          <button class="button__filter" id="applyPrice">Terapkan</button>
+        </div>
         <div class="product__container container grid" id="productContainer">
           <article>
             <!-- Produk akan dirender dari JS -->
